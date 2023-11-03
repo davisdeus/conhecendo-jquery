@@ -3,23 +3,29 @@ $(document).ready(function () {
     $('header button').click(function () {
         $('form').slideDown();
     })
-
-    $("#btn-cancelar").click(function () {
+    
+    $("#botao-cancelar").click(function () {
         $('form').slideUp();
     })
 
-    $('form').on('Submit', function (e) {
+    
+    $('form').on('Submit',function(e){
         e.preventDefault();
-        const enderecoDaNovaImagem = $('#endereco-igm-nova').val();
+        const enderecoDaNovaImagem = $('#endereco-imagem-nova').val();
         const novoItem = $('<li></li>');
-        $(`<img src="${enderecoDaNovaImagem}" />`).appendTo(novoItem);
-        $(`
-            <div class="overlay-img-link">
-                <a href="${enderecoDaNovaImagem}" title="Ver imagem em tamanho real" target="_blank">
+        $(`<img src = "${enderecoDaNovaImagem}"/>`).appendTo(novoItem);
+
+        $(`<div class = "overlay-imagem-link">
+                <a href="${enderecoDaNovaImagem}" target="_blank" title="Ver imagem em tamanho real">
                     Ver imagem em tamanho em real
                 </a>
             </div>
         `).appendTo(novoItem);
+            
+
         $(novoItem).appendTo('ul');
+        $(novoItem).fadeIn(1000);
+        $('#endereco-imagem-nova').val('')
     })
 })
+

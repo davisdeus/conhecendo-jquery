@@ -45,7 +45,7 @@ button{
     color: white;
 }
 
-#btn-cancelar{
+#botao-cancelar{
     background-color: red;
 }
 
@@ -66,7 +66,7 @@ ul li img{
     width: 100%;
 }
 
-.overlay-img-link{
+.overlay-imagem-link{
     padding: 16px;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
@@ -77,11 +77,11 @@ ul li img{
     transition: all ease 1s;
 }
 
-.overlay-img-link a{
+.overlay-imagem-link a{
     color: white;
     text-decoration: none;
 }
 
-ul li:hover .overlay-img-link{
+ul li:hover .overlay-imagem-link{
     opacity: 1;
 }
